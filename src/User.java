@@ -1,24 +1,20 @@
 public class User
 {
-    public int id;
-    public String name;
-    public String address;
+    private int id;
+    private String name;
+    private String address;
 
     public User(String name, int i){
         id = i;
-        if(name.length() < 0 || name.length() > 100) // Testing length
+        if(name.length() > 100)
         {
-            return; //If string is invalid, we dont try to store it
+            return; // If name is too long, we don't save it
         }
         this.name = name;
     }
 
     public void setName(String name)
     {
-        if(name.length() < 0)
-        {
-            return; //If string is invalid, we dont try to store it
-        }
         this.name = name;
     }
 
@@ -31,7 +27,7 @@ public class User
 
     public String getName(){ return name; }
 
-    public String getAddress(){ return "STREETNAME"; }
+    public String getAddress(){ return address; }
 
     @Override
     public boolean equals(Object other){
