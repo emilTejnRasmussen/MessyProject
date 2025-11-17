@@ -15,6 +15,6 @@ public class Main
 
         System.out.println(list.getu());
 
-        Persister.s(list.getu());
+        Persister.save(list.getu());
     }
 }
