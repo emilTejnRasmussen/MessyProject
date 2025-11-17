@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class User
 {
     private int id;
@@ -30,10 +32,17 @@ public class User
     public String getAddress(){ return address; }
 
     @Override
-    public boolean equals(Object other){
-        if(other instanceof User user){
-            return user.name == name;
-        }
-        return false;
+    public boolean equals(Object other)
+    {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
+        User user = (User) other;
+        return id == user.id;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return Objects.hashCode(id);
     }
 }
