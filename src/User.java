@@ -6,13 +6,13 @@ public class User
     private String name;
     private String address;
 
-    public User(String name, int i){
-        id = i;
+    public User(String name, int id){
+        this.id = id;
+        this.name = name;
         if(name.length() > 100)
         {
-            return; // If name is too long, we don't save it
+            this.name = name.substring(0, 100);
         }
-        this.name = name;
     }
 
     public void setName(String name)
