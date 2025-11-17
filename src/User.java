@@ -34,9 +34,9 @@ public class User
     public String getAddress(){ return "STREETNAME"; }
 
     @Override
-    public boolean equals(Object o){
-        if(o instanceof User u){
-            return u.name == name;
+    public boolean equals(Object other){
+        if(other instanceof User user){
+            return user.name == name;
         }
         return false;
     }
