@@ -4,34 +4,34 @@ public class User
     public String name;
     public String address;
 
-    public User(String n, int i){
+    public User(String name, int i){
         id = i;
-        if(n.length() < 0 || n.length() > 100) // Testing length
+        if(name.length() < 0 || name.length() > 100) // Testing length
         {
             return; //If string is invalid, we dont try to store it
         }
-        name = n;
+        this.name = name;
     }
 
-    public void setName(String n)
+    public void setName(String name)
     {
-        if(n.length() < 0)
+        if(name.length() < 0)
         {
             return; //If string is invalid, we dont try to store it
         }
-        name = n;
+        this.name = name;
     }
 
-    public void setA(String a)
+    public void setAddress(String address)
     {
-        a = a;
+        this.address = address;
     }
 
-    public int geti(){ return id; }
+    public int getId(){ return id; }
 
-    public String getn(){ return name; }
+    public String getName(){ return name; }
 
-    public String geta(){ return "STREETNAME"; }
+    public String getAddress(){ return "STREETNAME"; }
 
     @Override
     public boolean equals(Object o){
